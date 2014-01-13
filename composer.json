@@ -1,0 +1,21 @@
+{
+	"name": "rtablada/resize-and-pad",
+	"description": "Imagine filter to resize and pad images to a set width and height",
+	 "authors": [
+        {
+            "name": "Ryan Tablada",
+            "email": "ryan.tablada@gmail.com"
+        }
+    ],
+    "license": "MIT",
+	"require": {
+		"php": ">=5.3.0",
+		"imagine/imagine": "~0.5.0"
+	},
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-0": {
+			"Rtablada\\Images":"src/"
+		}
+	}
+}
