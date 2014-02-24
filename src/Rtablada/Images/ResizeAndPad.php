@@ -15,6 +15,13 @@ class ResizeAndPad implements \Imagine\Filter\FilterInterface
      * @var \Imagine\Image\Box
      */
     protected $size;
+    
+    /**
+     * Color for padding border
+     * 
+     * @var string
+     */
+    protected $color = '#fff';
 
     /**
      * Class constructor.
@@ -46,10 +53,15 @@ class ResizeAndPad implements \Imagine\Filter\FilterInterface
 
 		return $image;
 	}
+	
+	public function setColor($color)
+	{
+		$this->color = $color;
+	}
 
 	protected function createCanvas()
 	{
-		$transparency = new \Imagine\Image\Color('#fff', 0);
+		$transparency = new \Imagine\Image\Color($this->color, 0);
 		return $this->imagine->create($this->size, $transparency);
 	}
 
